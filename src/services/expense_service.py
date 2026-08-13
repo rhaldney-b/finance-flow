@@ -1,17 +1,24 @@
 from models.expense import Expense
 from services.storage import write_json, read_json
+import ui.inputs
 
-
-def add_expense():
-    store_name = input('Name: ')
-    amount = float(input('Amount: '))
+def add_expense(last_date=None):
+    store_name = ui.inputs.get_name('Name: ')
+    amount = ui.inputs.read_float('Amount: ')
     category = input('Category: ')
     payment_method = input('Payment method: ')
-    release_date = input('Release date: ')
+    release_date = ui.inputs.get_date('Release date: ', default_date=last_date)
     return Expense(store_name, amount, category, payment_method, release_date)
 
 def save_expense():
-    write_json(read_json() + [add_expense()])
+    last_date = None
+    while True:
+        expense = add_expense(last_date)
+        last_date = expense.release_date
+        write_json(read_json() + [expense])
+        choice = input('Add another expense? [Y/N]: ').strip().lower()
+        if choice == 'n':
+            break
 
 def list_expenses():
     expenses = read_json()
@@ -33,12 +40,15 @@ def update_expense():
     list_expenses()
 
     while True:
-        index = int(input('\nWhich expense do you want to edit? '))
         try:
+            index = int(input('\nWhich expense do you want to edit? '))
             expense = expenses[index - 1]
             break
+        except ValueError:
+            print('INVALID VALUE!')
         except IndexError:
             print('\nYou type out of range.')
+
 
     print('\nWhat do you want to edit?')
     print('1 - Store name')
@@ -50,10 +60,10 @@ def update_expense():
 
     option = input('Choice an option: ')
     if option == '1':
-        expense.store_name = input('New store name: ')
+        expense.store_name = ui.inputs.get_name('Name: ')
 
     elif option == '2':
-        expense.amount = float(input('New amount: '))
+        expense.amount = ui.inputs.read_float('Amount: ')
 
     elif option == '3':
         expense.category = input('New category: ')
@@ -62,14 +72,14 @@ def update_expense():
         expense.payment_method = input('New payment method: ')
 
     elif option == '5':
-        expense.release_date = input('New release date: ')
+        expense.release_date = ui.inputs.get_date('Release date: ')
         
     elif option == '6':
-        expense.store_name = input('New store name: ')
-        expense.amount = float(input('New amount: '))
+        expense.store_name = ui.inputs.get_name('Name: ')
+        expense.amount = ui.inputs.read_float('Amount: ')
         expense.category = input('New category: ')
         expense.payment_method = input('New payment method: ')
-        expense.release_date = input('New release date: ')
+        expense.release_date = ui.inputs.get_date('Release date: ')
     else:
         print('Option not exists.')
         return
@@ -98,3 +108,5 @@ def delete_expense():
         except IndexError:
             print('\nYou type out of range.')
             continue
+
+    

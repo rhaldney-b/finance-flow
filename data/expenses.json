@@ -1,9 +1,163 @@
 [
   {
-    "store_name": "Efootball",
-    "amount": 50.0,
+    "store_name": "Linkin Park",
+    "amount": 1000.0,
+    "category": "Music",
+    "payment_method": "Card",
+    "release_date": "2026-08-13"
+  },
+  {
+    "store_name": "League of Legends",
+    "amount": 49.99,
     "category": "Game",
     "payment_method": "Card",
-    "release_date": "03/08/2026"
+    "release_date": "2026-08-13"
+  },
+  {
+    "store_name": "KISS OF LIFE",
+    "amount": 580.0,
+    "category": "KPOP",
+    "payment_method": "Pix",
+    "release_date": "2026-08-13"
+  },
+  {
+    "store_name": "Aespa",
+    "amount": 1561.0,
+    "category": "Music",
+    "payment_method": "Card",
+    "release_date": "2026-08-15"
+  },
+  {
+    "store_name": "UIHSAUDASHUD",
+    "amount": 1655.0,
+    "category": "AIJDIA",
+    "payment_method": "Card",
+    "release_date": "2026-08-25"
+  },
+  {
+    "store_name": "auduhsa",
+    "amount": 11.0,
+    "category": "ausdasd",
+    "payment_method": "adaijsod",
+    "release_date": "2026-08-11"
+  },
+  {
+    "store_name": "Avicii",
+    "amount": 250.0,
+    "category": "Music",
+    "payment_method": "Card",
+    "release_date": "2026-06-05"
+  },
+  {
+    "store_name": "adasid",
+    "amount": 50.0,
+    "category": "amskdsakm",
+    "payment_method": "akmdamskd",
+    "release_date": "2026-08-05"
+  },
+  {
+    "store_name": "adasd",
+    "amount": 5.0,
+    "category": "adasd",
+    "payment_method": "asdasd",
+    "release_date": "2026-08-05"
+  },
+  {
+    "store_name": "ssujdsauidsad",
+    "amount": 50.0,
+    "category": "aoidsaiojd",
+    "payment_method": "ajodsajiod",
+    "release_date": "2026-07-23"
+  },
+  {
+    "store_name": "sdkpofsdpof",
+    "amount": 23.0,
+    "category": "sfsddf",
+    "payment_method": "ksfsdf",
+    "release_date": "2026-05-05"
+  },
+  {
+    "store_name": "adoadop",
+    "amount": 24.0,
+    "category": "oidiasod",
+    "payment_method": "asoidosia",
+    "release_date": "2026-07-23"
+  },
+  {
+    "store_name": "asdsad",
+    "amount": 25.0,
+    "category": "adasd",
+    "payment_method": "adas",
+    "release_date": "2026-07-23"
+  },
+  {
+    "store_name": "asdsad",
+    "amount": 25.0,
+    "category": "adasd",
+    "payment_method": "asds",
+    "release_date": "2026-08-25"
+  },
+  {
+    "store_name": "asudhasiudsa",
+    "amount": 25.0,
+    "category": "sdfdsfdsf",
+    "payment_method": "sdfdsf",
+    "release_date": "2026-05-03"
+  },
+  {
+    "store_name": "sdfsdf",
+    "amount": 25.0,
+    "category": "dfds",
+    "payment_method": "dsfds",
+    "release_date": "2026-02-05"
+  },
+  {
+    "store_name": "sfdsdfsdf",
+    "amount": 25.0,
+    "category": "sdfsdf",
+    "payment_method": "dsfdsf",
+    "release_date": "2026-07-23"
+  },
+  {
+    "store_name": "ADSADSAD",
+    "amount": 25.0,
+    "category": "ADSAD",
+    "payment_method": "ADSA",
+    "release_date": "2026-06-05"
+  },
+  {
+    "store_name": "ADSAD",
+    "amount": 50.0,
+    "category": "33",
+    "payment_method": "88",
+    "release_date": "2026-06-05"
+  },
+  {
+    "store_name": "halsey",
+    "amount": 50.0,
+    "category": "amsd",
+    "payment_method": "amd",
+    "release_date": "2026-05-25"
+  },
+  {
+    "store_name": "25",
+    "amount": 25.0,
+    "category": "adsad",
+    "payment_method": "ads",
+    "release_date": "2026-05-25"
+  },
+  {
+    "store_name": "233",
+    "amount": 223.0,
+    "category": "223",
+    "payment_method": "223",
+    "release_date": "2026-05-23"
+  },
+  {
+    "store_name": "22",
+    "amount": 35.0,
+    "category": "22",
+    "payment_method": "22",
+    "release_date": "2026-05-25"
   }
 ]
