@@ -1,13 +1,75 @@
-☐ Project planning
+FINANCEFLOW ROADMAP
 
-☐ Create Expense class
+COMPLETED
 
-☐ Add expense
+☑ Project planning
 
-☐ Save JSON
+☑ Create Expense class
 
-☐ Read JSON
+☑ Add expense
 
-☐ Split expenses
+☑ Save JSON
 
-☐ PyAutoGUI automation
+☑ Read JSON
+
+☑ List expenses
+
+☑ Update expense
+
+☑ Delete expense
+
+☑ Expense service
+
+☑ Input validation
+
+☑ Date handling
+
+☑ Currency formatting
+
+☑ Terminal menu
+
+☑ Git/GitHub project setup
+
+CURRENT
+
+☐ Improve error handling
+
+☐ Improve expense update flow
+
+☐ Review project architecture
+
+☐ Define the financial data model
+
+NEXT
+
+☐ Income management
+
+☐ Current balance
+
+☐ Payment methods
+
+☐ Categories
+
+☐ Financial reports
+
+☐ Financial goals
+
+FUTURE
+
+☐ Credit card management
+
+☐ Installments
+
+☐ Investment management
+
+☐ Statistics and analysis
+
+☐ Additional financial features
+
+☐ Graphical interface
+
+PROJECT PRINCIPLE
+
+FinanceFlow should remain fast, simple, and keyboard-focused.
+
+New features should be added gradually without sacrificing code organization, usability, or maintainability.
