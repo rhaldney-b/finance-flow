@@ -43,7 +43,13 @@ def get_name(prompt= ''):
             return store_name
         
         print('NAME CANNOT BE EMPTY!\n')
-            
+
+def get_int(prompt=''):
+    while True:
+        try:
+            return int(input(prompt))
+        except ValueError:
+            print('INVALID VALUE!\n')
     
 
 

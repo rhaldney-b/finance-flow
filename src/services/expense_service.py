@@ -40,14 +40,15 @@ def update_expense():
     list_expenses()
 
     while True:
-        try:
-            index = int(input('\nWhich expense do you want to edit? '))
-            expense = expenses[index - 1]
-            break
-        except ValueError:
-            print('INVALID VALUE!')
-        except IndexError:
-            print('\nYou type out of range.')
+        index = ui.inputs.get_int('\nWhich expense do you want to edit? ')
+
+        if not 1 <= index <= len(expenses):
+            print('\n Invalid expense number.')
+            continue
+    
+        expense = expenses[index - 1]
+        break
+        
 
 
     print('\nWhat do you want to edit?')
@@ -58,7 +59,7 @@ def update_expense():
     print('5 - Release Date')
     print('6 - Everything')
 
-    option = input('Choice an option: ')
+    option = ui.inputs.get_int('Choice an option: ')
     if option == '1':
         expense.store_name = ui.inputs.get_name('Name: ')
 
@@ -89,24 +90,23 @@ def update_expense():
 
 def delete_expense():
     expenses = read_json()
+
     if not expenses:
         print('\nNo expenses found.')
         return
-    
+
     list_expenses()
 
-
     while True:
-        index = int(input('\nWhich expense do you want to delete? '))
+        index = ui.inputs.get_int(
+            '\nWhich expense do you want to delete? '
+        )
 
-        try:
-            expenses.pop(index - 1)
-            write_json(expenses)
-            print('Expense deleted sucessfully!')
-            break
-
-        except IndexError:
-            print('\nYou type out of range.')
+        if not 1 <= index <= len(expenses):
+            print('\nInvalid expenser number.')
             continue
 
-    
+        expenses.pop(index - 1)
+        write_json(expenses)
+        print('Expense deleted successfully!')
+        break
