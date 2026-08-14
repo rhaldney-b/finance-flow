@@ -1,6 +1,6 @@
 [
   {
-    "store_name": "Linkin Park",
+    "store_name": "REDBULL",
     "amount": 1000.0,
     "category": "Music",
     "payment_method": "Card",
@@ -8,7 +8,7 @@
   },
   {
     "store_name": "League of Legends",
-    "amount": 49.99,
+    "amount": 5.0,
     "category": "Game",
     "payment_method": "Card",
     "release_date": "2026-08-13"
@@ -28,11 +28,11 @@
     "release_date": "2026-08-15"
   },
   {
-    "store_name": "UIHSAUDASHUD",
-    "amount": 1655.0,
-    "category": "AIJDIA",
-    "payment_method": "Card",
-    "release_date": "2026-08-25"
+    "store_name": "5",
+    "amount": 25.0,
+    "category": "",
+    "payment_method": "",
+    "release_date": "2026-02-25"
   },
   {
     "store_name": "auduhsa",
@@ -81,13 +81,6 @@
     "amount": 24.0,
     "category": "oidiasod",
     "payment_method": "asoidosia",
-    "release_date": "2026-07-23"
-  },
-  {
-    "store_name": "asdsad",
-    "amount": 25.0,
-    "category": "adasd",
-    "payment_method": "adas",
     "release_date": "2026-07-23"
   },
   {
@@ -147,10 +140,17 @@
     "release_date": "2026-05-25"
   },
   {
-    "store_name": "22",
+    "store_name": "Hallo Kitty",
     "amount": 35.0,
     "category": "22",
     "payment_method": "22",
     "release_date": "2026-05-25"
+  },
+  {
+    "store_name": "Monster",
+    "amount": 25.0,
+    "category": "",
+    "payment_method": "",
+    "release_date": "2026-08-14"
   }
 ]

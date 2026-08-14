@@ -60,22 +60,22 @@ def update_expense():
     print('6 - Everything')
 
     option = ui.inputs.get_int('Choice an option: ')
-    if option == '1':
+    if option == 1:
         expense.store_name = ui.inputs.get_name('Name: ')
 
-    elif option == '2':
+    elif option == 2:
         expense.amount = ui.inputs.read_float('Amount: ')
 
-    elif option == '3':
+    elif option == 3:
         expense.category = input('New category: ')
 
-    elif option == '4':
+    elif option == 4:
         expense.payment_method = input('New payment method: ')
 
-    elif option == '5':
+    elif option == 5:
         expense.release_date = ui.inputs.get_date('Release date: ')
         
-    elif option == '6':
+    elif option == 6:
         expense.store_name = ui.inputs.get_name('Name: ')
         expense.amount = ui.inputs.read_float('Amount: ')
         expense.category = input('New category: ')
@@ -110,3 +110,4 @@ def delete_expense():
         write_json(expenses)
         print('Expense deleted successfully!')
         break
+
