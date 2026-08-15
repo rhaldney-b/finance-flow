@@ -152,5 +152,19 @@
     "category": "",
     "payment_method": "",
     "release_date": "2026-08-14"
+  },
+  {
+    "store_name": "A",
+    "amount": 25.0,
+    "category": "",
+    "payment_method": "",
+    "release_date": "2026-03-25"
+  },
+  {
+    "store_name": ".",
+    "amount": 5.0,
+    "category": "25",
+    "payment_method": "25",
+    "release_date": "2026-02-25"
   }
 ]

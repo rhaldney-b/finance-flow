@@ -32,25 +32,8 @@ def list_expenses():
         print(f'{index}. {expense}')
     return 
 
-def update_expense():
-    expenses = read_json()
-    if not expenses:
-        print('\nNo expenses found.')
-        return
-    list_expenses()
 
-    while True:
-        index = ui.inputs.get_int('\nWhich expense do you want to edit? ')
-
-        if not 1 <= index <= len(expenses):
-            print('\n Invalid expense number.')
-            continue
-    
-        expense = expenses[index - 1]
-        break
-        
-
-
+def get_field_to_edit():
     print('\nWhat do you want to edit?')
     print('1 - Store name')
     print('2 - Amount')
@@ -59,31 +42,44 @@ def update_expense():
     print('5 - Release Date')
     print('6 - Everything')
 
-    option = ui.inputs.get_int('Choice an option: ')
-    if option == 1:
+    while True:
+        option = ui.inputs.get_int('Choice an option: ')
+        if 1 <= option <= 6:
+            return option
+        print('\nInvalid option. Please try again.\n')    
+
+def apply_expense_updates(expense, option):
+    if option in (1, 6):
         expense.store_name = ui.inputs.get_name('Name: ')
-
-    elif option == 2:
+    if option in (2, 6):
         expense.amount = ui.inputs.read_float('Amount: ')
-
-    elif option == 3:
+    if option in (3, 6):
         expense.category = input('New category: ')
-
-    elif option == 4:
+    if option in (4, 6):
         expense.payment_method = input('New payment method: ')
+    if option in (5, 6):
+        expense.release_date = ui.inputs.get_date('Release date: ')
 
-    elif option == 5:
-        expense.release_date = ui.inputs.get_date('Release date: ')
-        
-    elif option == 6:
-        expense.store_name = ui.inputs.get_name('Name: ')
-        expense.amount = ui.inputs.read_float('Amount: ')
-        expense.category = input('New category: ')
-        expense.payment_method = input('New payment method: ')
-        expense.release_date = ui.inputs.get_date('Release date: ')
-    else:
-        print('Option not exists.')
+
+def update_expense():
+    expenses = read_json()
+    if not expenses:
+        print('\nNo expenses found.')
         return
+    
+    list_expenses()
+
+    while True:
+        index = ui.inputs.get_int('\nWhich expense do you want to edit? ')
+
+        if 1 <= index <= len(expenses):
+            break
+        print('\nInvalid expense number.')
+    
+    expense = expenses[index - 1]
+
+    option = get_field_to_edit()
+    apply_expense_updates(expense, option)
 
     write_json(expenses)
     print('Expense updated sucessfully!')
@@ -98,9 +94,7 @@ def delete_expense():
     list_expenses()
 
     while True:
-        index = ui.inputs.get_int(
-            '\nWhich expense do you want to delete? '
-        )
+        index = ui.inputs.get_int('Which expense do you want to delete? ')
 
         if not 1 <= index <= len(expenses):
             print('\nInvalid expenser number.')

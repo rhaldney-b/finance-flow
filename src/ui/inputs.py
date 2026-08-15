@@ -12,9 +12,9 @@ def read_float(prompt= ''):
             if amount > 0:
                 return amount
             else:
-                print('ERROR: AMOUNT MUST BE GREATER THAN ZERO')
+                print('Amount must be greater than zero.')
         except ValueError:
-            print('ERROR: ENTER ONLY NUMBERS!\n')
+            print('Enter a valid number.\n')
 
 def get_date(prompt='', default_date=None):
     while True:
@@ -34,7 +34,7 @@ def get_date(prompt='', default_date=None):
             date_strp = datetime.strptime(date, '%d/%m/%Y')
             return date_strp
         except ValueError:
-            print('ERROR: INVALID DATE! USE DD/MM OR DD/MM/YYYY.\n')
+            print('Invalid date. Please use DD/MM or DD/MM/YYYY.\n')
 
 def get_name(prompt= ''):
     while True:
@@ -42,14 +42,14 @@ def get_name(prompt= ''):
         if store_name:
             return store_name
         
-        print('NAME CANNOT BE EMPTY!\n')
+        print('Name cannot be empty.\n')
 
 def get_int(prompt=''):
     while True:
         try:
             return int(input(prompt))
         except ValueError:
-            print('INVALID VALUE!\n')
+            print('\nInvalid input. Please enter a valid integer.\n')
     
 
 
