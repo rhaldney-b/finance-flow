@@ -1,18 +1,49 @@
 from datetime import datetime
 import locale
+import getpass
 
-locale.setlocale(locale.LC_ALL, 'pt_BR.UTF-8')
+def configure_locale():
+    USER = 'rhald'
+
+    actual_user = getpass.getuser()
+
+    if actual_user == USER:
+        pt_locales = [
+            'Portuguese_Brazil.1252',
+            'Portuguese_Brazil',
+            'pt-BR',
+            'pt_BR.UTF-8',
+            'pt_BR'
+        ]
+
+        for loc in pt_locales:
+            try:
+                locale.setlocale(locale.LC_ALL, loc)
+                return loc
+            except locale.Error:
+                continue
+
+    try:
+        return locale.setlocale(locale.LC_ALL, '')
+    except locale.Error:
+        locale.setlocale(locale.LC_ALL, 'C')
+        return 'C'
+
+    configure_locale()
 
 
 def read_float(prompt= ''):
     while True:
+        raw_input = input(prompt).strip()
+
+        clean_input = raw_input.replace(',', '.').replace(' ', '')
+
         try:
-            amount = input(prompt)
-            amount = locale.atof(amount)
+            amount = float(clean_input)
             if amount > 0:
                 return amount
             else:
-                print('Amount must be greater than zero.')
+                print('Amount must be greater than zero.\n')
         except ValueError:
             print('Enter a valid number.\n')
 

@@ -18,4 +18,10 @@ if __name__ == '__main__':
                 expense_service.delete_expense()
 
             elif choice == '0':
+                print('\nExiting the program.')
                 break
+
+            else:
+                 print('\nInvalid choice. Please try again.\n')
+
+            input('\nPress Enter to continue...')
