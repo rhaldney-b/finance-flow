@@ -133,11 +133,11 @@
     "release_date": "2026-05-25"
   },
   {
-    "store_name": "25",
-    "amount": 25.0,
-    "category": "adsad",
-    "payment_method": "ads",
-    "release_date": "2026-05-25"
+    "store_name": "BYD",
+    "amount": 15000.0,
+    "category": "Car",
+    "payment_method": "Card",
+    "release_date": "2026-08-16"
   },
   {
     "store_name": "Hallo Kitty",
@@ -161,17 +161,10 @@
     "release_date": "2026-03-25"
   },
   {
-    "store_name": ".",
-    "amount": 5.0,
-    "category": "25",
-    "payment_method": "25",
-    "release_date": "2026-02-25"
-  },
-  {
-    "store_name": "dklmfdkmasdsdmasdsad",
-    "amount": 455.0,
-    "category": "sndkadasoidnsadnsadnsad",
-    "payment_method": "aspkodmaspodmaopd",
-    "release_date": "2026-02-25"
+    "store_name": "Petrobras",
+    "amount": 25.5,
+    "category": "Gasolina",
+    "payment_method": "Card",
+    "release_date": "2026-08-16"
   }
 ]
